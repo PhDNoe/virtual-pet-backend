@@ -15,3 +15,15 @@ __pycache__/
 # IDE
 .vscode/
 .idea/
+
+# .gitignore
+
+# Variables de entorno y archivos de credenciales (NUNCA SUBIR)
+.env
+.DS_Store
+
+
+
+# Archivos específicos de Docker
+# Se ignoran para evitar conflictos si no se comparten
+# .env ya está arriba, pero puedes añadir archivos generados por Docker Compose si tienes alguno.
