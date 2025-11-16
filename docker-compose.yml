@@ -11,23 +11,19 @@ services:
       - "8000:8000"
     depends_on:
       - db
-    # CARGA DE VARIABLES DESDE EL ARCHIVO .env
+
     env_file:
       - .env
-    environment:
-      - DEBUG=1
-      # El host y el puerto SÍ se quedan, ya que son parámetros de Docker
-      - DATABASE_HOST=db
-      - DATABASE_PORT=5432
-      # Las variables de credenciales (USER, PASSWORD, NAME) se cargan desde .env
+
 
   db:
     image: postgres:15
     container_name: postgres_db
     restart: always
-    # CARGA DE VARIABLES DESDE EL ARCHIVO .env
+
     env_file:
-      - .env 
+      - .env
+
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     ports:
